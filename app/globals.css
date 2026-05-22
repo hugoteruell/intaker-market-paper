@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+  --font-serif: "Newsreader", "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --paper: #f3efe6;
+  --ink: #15130f;
+  --ash: #6b6760;
+  --rule: rgba(21, 19, 15, 0.14);
+  --rule-strong: rgba(21, 19, 15, 0.32);
+  --accent: #a8412a;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "kern", "liga", "calt";
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.rule {
+  height: 1px;
+  background: var(--rule);
+}
+
+.rule-strong {
+  height: 1px;
+  background: var(--rule-strong);
+}
+
+.dropcap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  line-height: 0.85;
+  float: left;
+  padding: 0.35rem 0.6rem 0 0;
+  font-weight: 400;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.smallcaps {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+}
+
+.note-marker {
+  font-family: var(--font-mono);
+  font-size: 0.55em;
+  vertical-align: super;
+  color: var(--accent);
+  margin-left: 1px;
+}
+
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
