@@ -1,6 +1,7 @@
 import Masthead from "@/components/Masthead";
 import TableOfContents from "@/components/TableOfContents";
 import Cover from "@/components/sections/Cover";
+import Teaser from "@/components/sections/Teaser";
 import ExecSummary from "@/components/sections/ExecSummary";
 import MarketSize from "@/components/sections/MarketSize";
 import Collapse from "@/components/sections/Collapse";
@@ -18,6 +19,7 @@ export default function Page() {
       <TableOfContents />
       <main className="relative">
         <Cover />
+        <Teaser />
         <ExecSummary />
         <MarketSize />
         <Collapse />
