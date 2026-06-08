@@ -5,3 +5,10 @@ out
 .env*.local
 .vercel
 *.log
+
+# Remotion
+video/out
+video/.remotion
+video/public/audio/*.mp3
+video/public/audio/*.aiff
+video/public/audio/*.wav
